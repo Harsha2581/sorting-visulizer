@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interactive sorting algorithm visualizer with multiple algorithms and customization options">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Header Section with Navigation -->
+  <header class="nav-container">
+    <h1 class="title" id="app-title">
+      <i class="fas fa-sort-amount-down"></i> Sorting Visualizer
+    </h1>
+    <nav class="navbar" id="navbar">
+      <!-- Array Controls -->
+      <button type="button" class="btn" id="random-btn">
+        <i class="fas fa-random"></i> New Array
+      </button>
+      <div class="separator"></div>
+      
+      <!-- Algorithm Selection -->
+      <span class="options">
+        <label for="algo-menu">Algorithm:</label>
+        <select name="select sort algorithm" id="algo-menu" class="algo-menu">
+          <option value="0" disabled selected>Select Algorithm</option>
+          <option value="1">Bubble Sort</option>
+          <option value="2">Selection Sort</option>
+          <option value="3">Insertion Sort</option>
+          <option value="4">Merge Sort</option>
+          <option value="5">Quick Sort</option>
+        </select>
+      </span>
+      
+      <!-- Size Selection -->
+      <span class="options">
+        <label for="size-menu">Size:</label>
+        <select name="select array size" id="size-menu" class="size-menu">
+          <option value="5">5 Elements</option>
+          <option value="10">10 Elements</option>
+          <option value="15">15 Elements</option>
+          <option value="20">20 Elements</option>
+          <option value="30">30 Elements</option>
+          <option value="40">40 Elements</option>
+          <option value="50" selected>50 Elements</option>
+          <option value="60">60 Elements</option>
+          <option value="70">70 Elements</option>
+          <option value="80">80 Elements</option>
+          <option value="90">90 Elements</option>
+          <option value="100">100 Elements</option>
+        </select>
+      </span>
+      
+      <!-- Speed Selection -->
+      <span class="options">
+        <label for="speed-menu">Speed:</label>
+        <select name="speed of visualization" id="speed-menu" class="speed-menu">
+          <option value="0.5">0.50x Speed</option>
+          <option value="0.75">0.75x Speed</option>
+          <option value="1" selected>1.00x Speed</option>
+          <option value="2">2.00x Speed</option>
+          <option value="4">4.00x Speed</option>
+          <option value="8">8.00x Speed</option>
+          <option value="10">10.00x Speed</option>
+        </select>
+      </span>
+      
+      <div class="separator"></div>
+      
+      <!-- Start Button -->
+      <button type="button" class="btn btn-primary start-btn">
+        <i class="fas fa-play"></i> Start Sorting
+      </button>
+      
+      <!-- Mobile Menu Icon -->
+      <a class="icon"><i class="fa fa-bars"></i></a>
+    </nav>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="center">
+    <!-- Color Legend Panel -->
+    <div class="info-panel">
+      <div class="info-item">
+        <div class="color-box color-default"></div>
+        <span class="info-text">Unsorted Elements</span>
+      </div>
+      <div class="info-item">
+        <div class="color-box color-compare"></div>
+        <span class="info-text">Being Compared</span>
+      </div>
+      <div class="info-item">
+        <div class="color-box color-special"></div>
+        <span class="info-text">Minimum/Selected</span>
+      </div>
+      <div class="info-item">
+        <div class="color-box color-pivot"></div>
+        <span class="info-text">Pivot (Quick Sort)</span>
+      </div>
+      <div class="info-item">
+        <div class="color-box color-sorted"></div>
+        <span class="info-text">Sorted Elements</span>
+      </div>
+    </div>
+    
+    <!-- Visualization Container -->
+    <div class="visualization-container">
+      <div class="array"></div>
+    </div>
+    
+    <!-- Algorithm Information Section -->
+    <div class="algorithm-info" id="algorithm-info">
+      <h3><i class="fas fa-info-circle"></i> Algorithm Information</h3>
+      <p>Select an algorithm from the dropdown to see information about it.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Sorting Visualizer &copy; 2023 | Visualize different sorting algorithms in action</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+# Sorting Algorithm Visualizer
+
+## Project Overview
+
+An interactive web application that visually demonstrates how various sorting algorithms work. The application provides real-time visualization of the sorting process with customizable parameters and educational information about each algorithm.
+
+## Features
+
+- **5 Sorting Algorithms**: Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort
+- **Customizable Parameters**: Adjustable array size (5-100 elements) and animation speed (0.5x-10x)
+- **Real-time Visualization**: Color-coded bars showing algorithm progress
+- **Algorithm Information**: Detailed complexity analysis and descriptions
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Modern UI**: Clean, intuitive interface with smooth animations
+
+## Technical Specifications
+
+### Frontend Technologies
+
+- **HTML5**: Semantic structure and accessibility
+- **CSS3**: Modern styling with CSS Grid, Flexbox, and CSS Variables
+- **JavaScript ES6+**: Vanilla JavaScript with modern features (Classes, Async/Await, Arrow Functions)
+
+### Key Components
+
+1. **Visualization Engine**: Real-time bar animation system
+2. **Algorithm Implementations**: Pure JavaScript sorting algorithms
+3. **UI Controller**: Responsive control panel with event handling
+4. **Information System**: Dynamic algorithm documentation
+
+### Performance Features
+
+- Efficient DOM manipulation
+- Optimized animation timing
+- Memory-efficient algorithm implementations
+- Responsive design with mobile-first approach
+
+## File Structure
+
+sorting-visualizer/
+│
+├── index.html # Main HTML structure
+├── style.css # Complete styling and responsive design
+├── script.js # Core functionality and algorithms
+└── README.md # Project documentation
